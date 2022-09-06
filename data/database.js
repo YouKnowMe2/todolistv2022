@@ -9,7 +9,7 @@ let MONGODB_URL = 'mongodb+srv://youknowme:youknowme%402019@cluster0.jlfcort.mon
 //     MONGODB_URL = process.env.MONGODB_URL;
 // }
 async function initDb(){
-    const client = await MongoClient.connect('mongodb://localhost:27017');
+    const client = await MongoClient.connect('mongodb+srv://youknowme:<password>@cluster0.jlfcort.mongodb.net/?retryWrites=true&w=majority');
     database = client.db('first-api');
 }
 
