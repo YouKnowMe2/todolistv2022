@@ -8,10 +8,11 @@ const app = express();
 app.use(cors());
 
 const enableCors = require('./middlewares/cors');
-app.use(express.json());
-
-let port = 3000;
 app.use(enableCors);
+app.use(express.json());
+app.options('*', cors());
+let port = 3000;
+
 const quoteRoutes = require('./routes/quotes.routes');
 const todosRoutes = require('./routes/todos.routes');
 

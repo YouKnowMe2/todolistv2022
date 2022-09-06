@@ -1,4 +1,5 @@
 const Todo = require('../models/todo.model');
+
 async function getAllTodos(req,res,next){
     let todos;
     try{
